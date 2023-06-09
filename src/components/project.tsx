@@ -1,20 +1,24 @@
+import type { StaticImageData } from 'next/image';
+import Image from 'next/image';
+
 import { ExtLink } from './ext-link';
 
 export type ProjectProps = {
-  image?: string;
   title: string;
   live?: string;
   demo?: string;
   code?: string;
+  image: StaticImageData;
 };
 
 export function Project({ code, image, title, demo, live }: ProjectProps) {
   return (
     <li>
-      <img
+      <Image
+        src={image}
+        placeholder="blur"
         alt={`${title} screenshot`}
-        src={image || 'https://picsum.photos/id/42/500'}
-        className="aspect-video w-full rounded-md object-cover"
+        className="aspect-video w-full rounded-md border object-contain"
       />
       <h3 className="mt-2 text-lg font-semibold">{title}</h3>
       <div>

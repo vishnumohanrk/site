@@ -1,26 +1,25 @@
+import Image from 'next/image';
+
 import { PageCenter } from '@/components/page-center';
+
+import profile from '../../public/profile.webp';
 
 export default function AppHome() {
   return (
     <PageCenter className="text-center">
-      <svg
-        fill="none"
-        strokeWidth={1}
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        className="h-64 w-64"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-      </svg>
+      <Image
+        priority
+        src={profile}
+        alt="vishnumohanrk"
+        placeholder="blur"
+        className="h-64 w-64 rounded-full object-cover"
+      />
       <h1 className="text-4xl font-bold">Hi! I&apos;m Vishnumohan</h1>
       <p className="text-neutral-400">
-        Passionate front-end web dev creating stellar, user-centric web apps
-        with performance and accessibility in mind.
+        Passionate front-end web developer dedicated to crafting performant,
+        user-friendly, and accessible web applications. Constantly driven by
+        curiosity and an insatiable desire to learn, I am always seeking new
+        opportunities to build exciting and innovative digital products.
       </p>
     </PageCenter>
   );
