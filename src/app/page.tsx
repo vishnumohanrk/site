@@ -1,49 +1,27 @@
-import { LINKS, PROJECTS_DATA } from './data';
+import { PageCenter } from '@/components/page-center';
 
 export default function AppHome() {
   return (
-    <main className="space-y-8 p-4 pb-20">
-      <section>
-        <h1 className="text-4xl font-bold">Vishnumohan R K</h1>
-        <p className="my-4 text-neutral-400">
-          Passionate React front-end web dev creating stellar, user-centric web
-          apps with performance and accessibility in mind.
-        </p>
-      </section>
-      <section>
-        <h2 className="text-3xl font-bold">Projects</h2>
-        <ul className="my-4 space-y-6">
-          {PROJECTS_DATA.map((i) => (
-            <li key={i.name}>
-              <article>
-                <h3 className="font-semibold underline">
-                  <a href={i.link} target="_blank" rel="noopener noreferrer">
-                    {i.name}
-                  </a>
-                </h3>
-                <p className="mt-1 text-neutral-400">{i.description}</p>
-              </article>
-            </li>
-          ))}
-        </ul>
-      </section>
-      <section>
-        <h2 className="text-3xl font-bold">Links</h2>
-        <ul className="my-4 flex space-x-4">
-          {LINKS.map((i) => (
-            <li key={i.name}>
-              <a
-                href={i.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold underline"
-              >
-                {i.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </main>
+    <PageCenter className="text-center">
+      <svg
+        fill="none"
+        strokeWidth={1}
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        className="h-64 w-64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+      </svg>
+      <h1 className="text-4xl font-bold">Hi! I&apos;m Vishnumohan</h1>
+      <p className="text-neutral-400">
+        Passionate front-end web dev creating stellar, user-centric web apps
+        with performance and accessibility in mind.
+      </p>
+    </PageCenter>
   );
 }
