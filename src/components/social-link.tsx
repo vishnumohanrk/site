@@ -1,11 +1,11 @@
+import type { CodeIcon } from '@radix-ui/react-icons/';
 import clsx from 'clsx';
-import type { IconType } from 'react-icons';
 
 type SocialLinkProps = {
   name: string;
   href: string;
-  Icon: IconType;
   className?: string;
+  Icon: typeof CodeIcon;
 };
 
 export function SocialLink({ Icon, href, name, className }: SocialLinkProps) {
@@ -20,7 +20,7 @@ export function SocialLink({ Icon, href, name, className }: SocialLinkProps) {
           className
         )}
       >
-        <Icon size={24} />
+        <Icon className="h-6 w-6" />
         {name}
       </a>
     </li>
