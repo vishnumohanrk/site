@@ -17,9 +17,9 @@ export default function AppHome() {
       <h1 className="text-4xl font-bold">Hi! I&apos;m Vishnumohan</h1>
       <p className="text-neutral-400">
         Passionate front-end web developer dedicated to crafting performant,
-        user-friendly, and accessible web applications. Constantly driven by
-        curiosity and an insatiable desire to learn, I am always seeking new
-        opportunities to build exciting and innovative digital products.
+        user-friendly, and accessible web apps. Constantly driven by curiosity
+        and an insatiable desire to learn, I am always seeking new opportunities
+        to build exciting and innovative digital products.
       </p>
     </PageCenter>
   );

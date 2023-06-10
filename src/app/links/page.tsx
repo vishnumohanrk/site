@@ -13,7 +13,7 @@ export default function Links() {
   return (
     <PageCenter>
       <h2 className="sr-only">Links</h2>
-      <ul className="flex flex-wrap justify-center gap-6">
+      <ul className="flex w-full flex-col flex-wrap items-center justify-center gap-6 sm:max-w-lg">
         <SocialLink
           name="LinkedIn"
           Icon={IoLogoLinkedin}
@@ -39,12 +39,16 @@ export default function Links() {
           className="hover:bg-teal-700"
         />
         <SocialLink
-          name="Resume"
+          name="Résumé"
           Icon={IoDocumentTextOutline}
           href="https://drive.google.com/file/d/14X5m75Dfckug2MjOvrMc6idDK3JBDms2/view"
-          className="hover:bg-neutral-50 hover:text-neutral-950"
+          className="hover:bg-neutral-50 hover:text-neutral-900"
         />
       </ul>
     </PageCenter>
   );
 }
+
+export const metadata = {
+  title: 'Links',
+};

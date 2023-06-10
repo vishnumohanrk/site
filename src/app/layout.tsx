@@ -9,11 +9,6 @@ const inter = Inter({
   variable: '--font-sans',
 });
 
-export const metadata = {
-  title: 'Vishnumohan R K',
-  description: 'Vishnumohan R K - Front-End Web Developer',
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -21,12 +16,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="bg-neutral-950 font-sans text-neutral-50 antialiased">
+      <body className="bg-neutral-900 font-sans text-neutral-50 antialiased">
         <AppHeader />
-        <main className="mx-auto max-w-screen-md px-4 pb-16 sm:pt-16">
+        <main className="mx-auto max-w-screen-md px-4 pb-24 pt-4 sm:pt-24">
           {children}
         </main>
       </body>
     </html>
   );
 }
+
+export const metadata = {
+  description: 'Vishnumohan R K - Front-End Web Developer',
+  title: {
+    absolute: 'Vishnumohan R K',
+    template: '%s | Vishnumohan R K',
+  },
+};
