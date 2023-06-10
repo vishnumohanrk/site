@@ -8,7 +8,11 @@ export default function Info({ text }: { text: string }) {
     <Tooltip.Provider delayDuration={0}>
       <Tooltip.Root>
         <Tooltip.Trigger asChild>
-          <button type="button" className="text-neutral-400">
+          <button
+            type="button"
+            aria-label="description"
+            className="text-neutral-400"
+          >
             <InfoCircledIcon />
           </button>
         </Tooltip.Trigger>

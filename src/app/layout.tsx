@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body className="bg-neutral-900 font-sans text-neutral-50 antialiased">
         <AppHeader />
-        <main className="mx-auto max-w-screen-md px-4 pb-24 pt-4 sm:pt-24">
+        <main className="mx-auto max-w-screen-md px-4 py-20 max-sm:pt-4">
           {children}
         </main>
       </body>

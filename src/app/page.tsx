@@ -9,9 +9,11 @@ export default function AppHome() {
     <PageCenter className="text-center">
       <Image
         priority
+        width={256}
+        height={256}
         src={profile}
-        alt="vishnumohanrk"
         placeholder="blur"
+        alt="vishnumohanrk"
         className="h-64 w-64 rounded-full object-cover"
       />
       <h1 className="text-4xl font-bold">Hi! I&apos;m Vishnumohan</h1>
