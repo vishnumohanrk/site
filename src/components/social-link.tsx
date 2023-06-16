@@ -1,26 +1,23 @@
 import type { CodeIcon } from '@radix-ui/react-icons/';
-import clsx from 'clsx';
 
 type SocialLinkProps = {
   name: string;
   href: string;
-  className?: string;
+  color: string;
   Icon: typeof CodeIcon;
 };
 
-export function SocialLink({ Icon, href, name, className }: SocialLinkProps) {
+export function SocialLink({ Icon, href, name, color }: SocialLinkProps) {
   return (
     <li className="w-full">
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={clsx(
-          'flex items-center justify-center gap-2 rounded-full border py-4 text-lg font-semibold transition hover:scale-105 focus-visible:scale-105 active:scale-95',
-          className
-        )}
+        style={{ ['--color' as string]: color }}
+        className="flex items-center justify-center gap-2.5 rounded-full border py-4 text-lg font-semibold transition hover:border-transparent hover:bg-link focus:border-transparent focus:bg-link focus:outline-none focus:ring-2 focus:ring-link focus:ring-offset-2 focus:ring-offset-neutral-900"
       >
-        <Icon className="h-6 w-6" />
+        <Icon className="h-6 w-6" aria-hidden />
         {name}
       </a>
     </li>

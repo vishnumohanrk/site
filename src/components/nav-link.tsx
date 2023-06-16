@@ -17,7 +17,7 @@ export function NavLink({ href, children }: NavLinkProps) {
       <Link
         href={href}
         className={clsx(
-          'inline-flex h-16 w-full items-center justify-center font-semibold hover:underline',
+          'inline-flex h-16 w-full items-center justify-center font-semibold hover:underline sm:px-4',
           pathName === href ? 'text-neutral-50' : 'text-neutral-400'
         )}
       >

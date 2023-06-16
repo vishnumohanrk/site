@@ -1,11 +1,10 @@
 import dynamic from 'next/dynamic';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
-import { Suspense } from 'react';
 
 import { ExtLink } from './ext-link';
 
-const Info = dynamic(() => import('./info'));
+const ProjectInfo = dynamic(() => import('./project-info'));
 
 export type ProjectProps = {
   title: string;
@@ -39,11 +38,9 @@ export function Project({
           {live && <ExtLink href={live} label="Live" />}
         </div>
       </div>
-      <h3 className="mt-2 flex items-stretch gap-2 text-lg  font-semibold">
-        <span className="truncate">{title}</span>
-        <Suspense>
-          <Info text={description} />
-        </Suspense>
+      <h3 className="mt-2 flex items-stretch gap-2 font-semibold sm:text-lg">
+        <span className="sm:truncate">{title}</span>
+        <ProjectInfo text={description} />
       </h3>
     </li>
   );

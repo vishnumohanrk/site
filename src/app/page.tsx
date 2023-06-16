@@ -16,12 +16,12 @@ export default function AppHome() {
         alt="vishnumohanrk"
         className="h-64 w-64 rounded-full object-cover"
       />
-      <h1 className="text-4xl font-bold">Hi! I&apos;m Vishnumohan</h1>
+      <h2 className="text-4xl font-bold">Hi! I&apos;m Vishnumohan</h2>
       <p className="text-neutral-400">
         Passionate front-end web developer dedicated to crafting performant,
         user-friendly, and accessible web apps. Constantly driven by curiosity
         and an insatiable desire to learn, I am always seeking new opportunities
-        to build exciting and innovative digital products.
+        to build exciting and innovative products.
       </p>
     </PageCenter>
   );

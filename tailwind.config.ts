@@ -17,6 +17,10 @@ const twConfig: Config = {
       borderColor: ({ theme }) => ({
         DEFAULT: theme('colors.neutral.700'),
       }),
+
+      colors: {
+        link: 'var(--color)',
+      },
     },
   },
 

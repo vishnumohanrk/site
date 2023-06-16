@@ -6,4 +6,10 @@
   :root {
     color-scheme: dark;
   }
+
+  @media (hover: none) {
+    .tooltip {
+      @apply hidden;
+    }
+  }
 }

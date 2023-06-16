@@ -3,7 +3,7 @@
 import { InfoCircledIcon } from '@radix-ui/react-icons';
 import * as Tooltip from '@radix-ui/react-tooltip';
 
-export default function Info({ text }: { text: string }) {
+export default function ProjectInfo({ text }: { text: string }) {
   return (
     <Tooltip.Provider delayDuration={0}>
       <Tooltip.Root>
@@ -11,9 +11,9 @@ export default function Info({ text }: { text: string }) {
           <button
             type="button"
             aria-label="description"
-            className="text-neutral-400"
+            className="tooltip text-neutral-400"
           >
-            <InfoCircledIcon />
+            <InfoCircledIcon aria-hidden />
           </button>
         </Tooltip.Trigger>
         <Tooltip.Portal>
