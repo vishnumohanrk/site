@@ -1,30 +1,23 @@
-import type { Config } from 'tailwindcss';
-import { fontFamily } from 'tailwindcss/defaultTheme';
+import type { Config } from "tailwindcss";
 
-const twConfig: Config = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+const config = {
+	content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
 
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-      },
+	theme: {
+		colors: {
+			background: "#feefe8",
+			text: "#232323",
+			primary: "#f45d48",
+		},
 
-      transitionTimingFunction: {
-        DEFAULT: 'linear',
-      },
+		extend: {
+			fontFamily: {
+				sans: ["var(--font-geist-sans)"],
+			},
+		},
+	},
 
-      borderColor: ({ theme }) => ({
-        DEFAULT: theme('colors.neutral.700'),
-      }),
+	plugins: [],
+} satisfies Config;
 
-      colors: {
-        link: 'var(--color)',
-      },
-    },
-  },
-
-  plugins: [],
-};
-
-export default twConfig;
+export default config;

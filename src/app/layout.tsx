@@ -1,35 +1,21 @@
-import './globals.css';
+import "./globals.css";
 
-import { Inter } from 'next/font/google';
+import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
 
-import { AppHeader } from '@/components/app-header';
+import type { RCProps } from "@/components/utils";
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-neutral-900 font-sans text-neutral-50 antialiased">
-        <AppHeader />
-        <main className="mx-auto max-w-screen-md px-4 py-20 max-sm:pt-4">
-          {children}
-        </main>
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: RCProps) {
+	return (
+		<html lang="en" className={GeistSans.variable}>
+			<body className="bg-background font-sans text-text antialiased">
+				{children}
+			</body>
+		</html>
+	);
 }
 
-export const metadata = {
-  description: 'Vishnumohan R K - Front-End Web Developer',
-  title: {
-    absolute: 'Vishnumohan R K',
-    template: '%s | Vishnumohan R K',
-  },
+export const metadata: Metadata = {
+	title: "Vishnumohan R K - Front-End Web Developer",
+	description: "Vishnumohan R K - Front-End Web Developer",
 };

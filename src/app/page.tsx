@@ -1,28 +1,29 @@
-import Image from 'next/image';
-
-import { PageCenter } from '@/components/page-center';
-
-import profile from '../../public/profile.webp';
-
-export default function AppHome() {
-  return (
-    <PageCenter className="text-center">
-      <Image
-        priority
-        width={256}
-        height={256}
-        src={profile}
-        placeholder="blur"
-        alt="vishnumohanrk"
-        className="h-64 w-64 rounded-full object-cover"
-      />
-      <h2 className="text-4xl font-bold">Hi! I&apos;m Vishnumohan</h2>
-      <p className="text-neutral-400">
-        Passionate front-end web developer dedicated to crafting performant,
-        user-friendly, and accessible web apps. Constantly driven by curiosity
-        and an insatiable desire to learn, I am always seeking new opportunities
-        to build exciting and innovative products.
-      </p>
-    </PageCenter>
-  );
+export default function HomePage() {
+	return (
+		<main className="grid min-h-dvh place-items-center p-4">
+			<section className="text-center font-bold">
+				<h1 className="text-4xl md:text-5xl">Vishnumohan R K</h1>
+				<ul className="mt-4 flex justify-center gap-6 text-primary underline">
+					<li>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://github.com/vishnumohanrk/"
+						>
+							GitHub
+						</a>
+					</li>
+					<li>
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://www.linkedin.com/in/vishnumohanrk/"
+						>
+							LinkedIn
+						</a>
+					</li>
+				</ul>
+			</section>
+		</main>
+	);
 }
