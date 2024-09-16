@@ -5,9 +5,10 @@ const config = {
 
 	theme: {
 		colors: {
-			background: "#feefe8",
-			text: "#232323",
-			primary: "#f45d48",
+			background: "#fffffe",
+			heading: "#0f0e17",
+			paragraph: "#2e2f3e",
+			primary: "#e53170",
 		},
 
 		extend: {
